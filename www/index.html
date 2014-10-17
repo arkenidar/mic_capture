@@ -63,8 +63,10 @@
                     alert('Error code: ' + error.code + ' message: ' + error.message );
                 };
                 
+                var options = {limit:1, duration: 10*60*60};
+                
                 // start audio capture
-                navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:1});
+                navigator.device.capture.captureAudio(captureSuccess, captureError, options);
                 
                 alert('end');
             }
